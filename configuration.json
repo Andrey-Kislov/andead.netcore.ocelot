@@ -1,0 +1,27 @@
+{
+    "ReRoutes": [{
+        "DownstreamHostAndPorts": [
+            {
+                "Host": "localhost",
+                "Port": 3000
+            }
+        ],
+        "DownstreamPathTemplate": "/{url}",
+        "UpstreamPathTemplate": "/{url}",
+        "UpstreamHttpMethod": [],
+        "ReRouteIsCaseSensitive": false,
+        "DownstreamScheme": "http"
+    }, {
+        "DownstreamHostAndPorts": [
+            {
+                "Host": "localhost",
+                "Port": 5051
+            }
+        ],
+        "DownstreamPathTemplate": "/api/oauth/{everything}",
+        "UpstreamPathTemplate": "/social/provider/{everything}",
+        "UpstreamHttpMethod": [],
+        "ReRouteIsCaseSensitive": false,
+        "DownstreamScheme": "http"
+    }]
+}
