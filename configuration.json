@@ -2,7 +2,7 @@
     "ReRoutes": [{
         "DownstreamHostAndPorts": [
             {
-                "Host": "localhost",
+                "Host": "web",
                 "Port": 3000
             }
         ],
@@ -14,7 +14,7 @@
     }, {
         "DownstreamHostAndPorts": [
             {
-                "Host": "localhost",
+                "Host": "oauth",
                 "Port": 5051
             }
         ],
