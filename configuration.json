@@ -11,6 +11,7 @@
         "UpstreamHttpMethod": [],
         "ReRouteIsCaseSensitive": false,
         "DownstreamScheme": "https"
+        "DangerousAcceptAnyServerCertificateValidator": true
     },{
         "DownstreamHostAndPorts": [
             {
