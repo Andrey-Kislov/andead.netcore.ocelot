@@ -56,7 +56,7 @@ namespace andead.netcore.ocelot
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseOcelot().Wait();
+            app.UseHttpsRedirection().UseOcelot().Wait();
         }
     }
 }
