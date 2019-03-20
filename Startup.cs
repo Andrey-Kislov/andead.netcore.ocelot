@@ -54,7 +54,7 @@ namespace andead.netcore.ocelot
             services.AddHttpsRedirection(options =>
             {
                 options.RedirectStatusCode = StatusCodes.Status301MovedPermanently;
-                options.HttpsPort = 8081;
+                options.HttpsPort = 443;
             });
 
             services.AddOcelot();
