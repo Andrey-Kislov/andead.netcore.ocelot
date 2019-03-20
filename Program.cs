@@ -14,6 +14,7 @@ namespace andead.netcore.ocelot
     public class Program
     {
         private const string LISTEN_PORT_KEY_NAME = "listen-port";
+        private const string CERT_PASSWORD = "cert-password";
 
         public static void Main(string[] args)
         {
@@ -25,9 +26,10 @@ namespace andead.netcore.ocelot
                 .ConfigureKestrel((hostingContext, options) =>
                 {
                     int listenPort = hostingContext.Configuration.GetValue<int>(LISTEN_PORT_KEY_NAME, 8081);
+                    string certPassword = hostingContext.Configuration.GetValue<string>(CERT_PASSWORD, "");
 
                     options.Listen(IPAddress.Any, listenPort, listenOptions => {
-                        // listenOptions.UseHttps(certFileName, certPassword);
+                        listenOptions.UseHttps(@"certs/cert.pfx", certPassword);
                     });
                 })
                 .ConfigureAppConfiguration(config =>
