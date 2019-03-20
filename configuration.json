@@ -11,7 +11,19 @@
         "UpstreamHttpMethod": [],
         "ReRouteIsCaseSensitive": false,
         "DownstreamScheme": "http"
-    }, {
+    },{
+        "DownstreamHostAndPorts": [
+            {
+                "Host": "web",
+                "Port": 443
+            }
+        ],
+        "DownstreamPathTemplate": "/{url}",
+        "UpstreamPathTemplate": "/{url}",
+        "UpstreamHttpMethod": [],
+        "ReRouteIsCaseSensitive": false,
+        "DownstreamScheme": "https"
+    },{
         "DownstreamHostAndPorts": [
             {
                 "Host": "oauth",
