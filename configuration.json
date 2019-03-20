@@ -10,7 +10,7 @@
         "UpstreamPathTemplate": "/{url}",
         "UpstreamHttpMethod": [],
         "ReRouteIsCaseSensitive": false,
-        "DownstreamScheme": "http"
+        "DownstreamScheme": "https"
     },{
         "DownstreamHostAndPorts": [
             {
