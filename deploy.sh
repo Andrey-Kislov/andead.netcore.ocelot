@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ev
 
-echo "dotnet andead.netcore.ocelot.dll --issuer=$ISSUER --audience=$AUDIENCE --signing-key=$SIGNING_KEY" >> ./publish/entrypoint.sh
+echo "dotnet andead.netcore.ocelot.dll --issuer=$ISSUER --audience=$AUDIENCE --signing-key=$SIGNING_KEY --cert-password=$PFX_CERT_PASSWORD" >> ./publish/entrypoint.sh
 
 docker build -t andead/netcore.ocelot:latest publish/.
 
