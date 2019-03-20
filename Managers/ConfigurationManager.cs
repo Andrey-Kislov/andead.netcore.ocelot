@@ -10,6 +10,7 @@ namespace andead.netcore.ocelot.Managers
         public const string ISSUER = "issuer";
         public const string AUDIENCE = "audience";
         public const string SIGNING_KEY = "signing-key";
+        public const string LISTEN_PORT = "listen-port";
     }
 
     public class ConfigurationManager

@@ -51,12 +51,18 @@ namespace andead.netcore.ocelot
                     x.TokenValidationParameters = tokenValidationParameters;
                 });
 
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = StatusCodes.Status301MovedPermanently;
+                options.HttpsPort = int.Parse(configurationManager.GetValue(ConfigurationKey.LISTEN_PORT));
+            });
+
             services.AddOcelot();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseOcelot().Wait();
+            app.UseHttpsRedirection().UseOcelot().Wait();
         }
     }
 }
