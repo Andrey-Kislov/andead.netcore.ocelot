@@ -3,18 +3,6 @@
         "DownstreamHostAndPorts": [
             {
                 "Host": "web",
-                "Port": 80
-            }
-        ],
-        "DownstreamPathTemplate": "/{url}",
-        "UpstreamPathTemplate": "/{url}",
-        "UpstreamHttpMethod": [],
-        "ReRouteIsCaseSensitive": false,
-        "DownstreamScheme": "http"
-    },{
-        "DownstreamHostAndPorts": [
-            {
-                "Host": "web",
                 "Port": 443
             }
         ],
