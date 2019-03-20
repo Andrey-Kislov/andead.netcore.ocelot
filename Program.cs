@@ -28,6 +28,8 @@ namespace andead.netcore.ocelot
                     int listenPort = hostingContext.Configuration.GetValue<int>(LISTEN_PORT_KEY_NAME, 8081);
                     string certPassword = hostingContext.Configuration.GetValue<string>(CERT_PASSWORD, "");
 
+                    options.Listen(IPAddress.Any, 8080);
+
                     // Use HTTPS
                     options.Listen(IPAddress.Any, listenPort, listenOptions => {
                         listenOptions.UseHttps(@"certs/cert.pfx", certPassword);
