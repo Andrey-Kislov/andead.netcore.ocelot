@@ -30,7 +30,7 @@ namespace andead.netcore.ocelot
 
                     // Use HTTPS
                     options.Listen(IPAddress.Any, listenPort, listenOptions => {
-                        listenOptions.UseHttps(@"certs/cert.pfx", certPassword);
+                        //listenOptions.UseHttps(@"certs/cert.pfx", certPassword);
                     });
                 })
                 .ConfigureAppConfiguration(config =>
