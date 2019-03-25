@@ -24,5 +24,24 @@
         "UpstreamHttpMethod": [],
         "ReRouteIsCaseSensitive": false,
         "DownstreamScheme": "http"
+    },{
+        "DownstreamHostAndPorts": [
+            {
+                "Host": "notifications",
+                "Port": 5051
+            }
+        ],
+        "DownstreamPathTemplate": "/api/notifications/{everything}",
+        "UpstreamPathTemplate": "/notifications/{everything}",
+        "UpstreamHttpMethod": [],
+        "ReRouteIsCaseSensitive": false,
+        "DownstreamScheme": "http",
+        "AuthenticationOptions": {
+            "AuthenticationProviderKey": "AuthKey",
+            "AllowedScopes": []
+        },
+        "AddQueriesToRequest": {
+            "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier] > value"
+        }
     }]
 }
