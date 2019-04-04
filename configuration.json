@@ -43,5 +43,24 @@
         "AddQueriesToRequest": {
             "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier] > value"
         }
+    },{
+        "DownstreamHostAndPorts": [
+            {
+                "Host": "mqtt",
+                "Port": 5051
+            }
+        ],
+        "DownstreamPathTemplate": "/api/devices/{everything}",
+        "UpstreamPathTemplate": "/devices/{everything}",
+        "UpstreamHttpMethod": [],
+        "ReRouteIsCaseSensitive": false,
+        "DownstreamScheme": "http",
+        "AuthenticationOptions": {
+            "AuthenticationProviderKey": "AuthKey",
+            "AllowedScopes": []
+        },
+        "AddQueriesToRequest": {
+            "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier] > value"
+        }
     }]
 }
