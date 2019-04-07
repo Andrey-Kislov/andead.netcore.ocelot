@@ -50,8 +50,8 @@
                 "Port": 5051
             }
         ],
-        "DownstreamPathTemplate": "/api/devices/{everything}",
-        "UpstreamPathTemplate": "/devices/{everything}",
+        "DownstreamPathTemplate": "/api/{everything}",
+        "UpstreamPathTemplate": "/mqtt/{everything}",
         "UpstreamHttpMethod": [],
         "ReRouteIsCaseSensitive": false,
         "DownstreamScheme": "http",
